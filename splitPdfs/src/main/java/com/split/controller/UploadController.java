@@ -33,6 +33,20 @@ public class UploadController {
         return "upload";
     }
     
+    @GetMapping("/splitPdfs")
+    public String goToHome() {
+        return "upload";
+    }
+    
+    @GetMapping("/uploadStatus")
+    public String uploadStatus() {
+        return "uploadStatus";
+    }
+    
+    @GetMapping("/merge")
+    public String goToMerge() {
+        return "merge";
+    }
 	public static String split(int startPage, int endPage,String filePath,HttpServletRequest request) {
 		try {
 			// take the user input for file Path
@@ -129,16 +143,6 @@ public class UploadController {
         return "redirect:/uploadStatus";
     }
 
-    @GetMapping("/uploadStatus")
-    public String uploadStatus() {
-        return "uploadStatus";
-    }
-    
-    @GetMapping("/merge")
-    public String goToMerge() {
-        return "merge";
-    }
-    
     public static String mergeFiles(String[] filePaths) throws IOException {
     	//Limiting this solution to merge only max 3 files 
     	int numberOfFiles = filePaths.length;
