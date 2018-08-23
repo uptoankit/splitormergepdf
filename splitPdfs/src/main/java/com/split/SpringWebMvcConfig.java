@@ -30,6 +30,7 @@ public class SpringWebMvcConfig extends WebMvcConfigurerAdapter {
         return viewResolver;
     }
     
+    
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/files/**").addResourceLocations("file:///C:/ankit/upload/");
