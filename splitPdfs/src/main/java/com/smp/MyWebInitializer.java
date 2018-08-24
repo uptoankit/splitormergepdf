@@ -1,4 +1,4 @@
-package com.split;
+package com.smp;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

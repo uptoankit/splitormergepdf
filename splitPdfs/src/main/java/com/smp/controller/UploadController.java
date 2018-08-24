@@ -1,4 +1,4 @@
-package com.split.controller;
+package com.smp.controller;
 
 import java.io.File;
 import java.io.IOException;

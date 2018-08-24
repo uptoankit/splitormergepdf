@@ -1,4 +1,4 @@
-package com.split.exception;
+package com.smp.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

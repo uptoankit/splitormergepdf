@@ -1,4 +1,4 @@
-package com.split;
+package com.smp;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.split"})
+@ComponentScan({"com.smp"})
 public class SpringWebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Bean

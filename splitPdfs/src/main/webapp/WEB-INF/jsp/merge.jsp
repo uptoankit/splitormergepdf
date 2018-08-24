@@ -21,8 +21,8 @@
 				<a class="navbar-brand" href="/splitPdfs">SMP</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="/splitPdfs">Home</a></li>
-				<li><a href="<c:url value="/merge" />">Merge PDFs</a></li>
+				<li><a href="/splitPdfs">Home</a></li>
+				<li class="active"><a href="<c:url value="/merge" />">Merge PDFs</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span>
