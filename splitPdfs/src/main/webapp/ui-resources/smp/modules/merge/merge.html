@@ -1,0 +1,27 @@
+<div class="container">
+			<form autocomplete="off" method="POST"
+				action="${pageContext.request.contextPath}/uploadForMerge"
+				enctype="multipart/form-data">
+				<div class="row">						
+					<div class="col-md-12">
+						<div class="col-md-2">First File to merge: </div>
+						<div class="col-md-10"><input type="file" name="files" /></div>
+					</div><br /><br />
+					<div class="col-md-12">
+						<div class="col-md-2">Second File to merge: </div>
+						<div class="col-md-10"><input type="file" name="files" /></div>
+					</div><br /><br />
+					<div class="col-md-12">
+						<div class="col-md-2">Third File to merge: </div>
+						<div class="col-md-10"><input type="file" name="files" /></div>
+					</div><br /><br />
+				</div>
+				
+				<div class="row">
+						<div class="col-md-2"> </div>
+						<div class="col-md-10">
+							<input type="submit" value="Merge" />
+						</div>
+					</div>
+			</form>
+	</div>

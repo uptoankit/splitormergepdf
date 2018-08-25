@@ -30,12 +30,12 @@ public class UploadController {
     
     @GetMapping("/")
     public String index() {
-        return "upload";
+        return "home";
     }
     
-    @GetMapping("/splitPdfs")
+    @GetMapping("/split")
     public String goToHome() {
-        return "upload";
+        return "split";
     }
     
     @GetMapping("/uploadStatus")
@@ -47,12 +47,10 @@ public class UploadController {
     public String goToMerge() {
         return "merge";
     }
+    
 	public static String split(int startPage, int endPage,String filePath,HttpServletRequest request) {
 		try {
-			// take the user input for file Path
-			//String filePath = "C:/Users/anagarw3/Downloads/splitpdf/The Hermitage";
-			//Loading an existing PDF document
-			//File file = new File(filePath + ".pdf");
+			// take the user input for file Path Loading an existing PDF document
 			
 			File file = new File(filePath);
 			int index = filePath.indexOf(".pdf");
