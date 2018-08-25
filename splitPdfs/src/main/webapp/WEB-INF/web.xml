@@ -59,7 +59,7 @@
 
 	<servlet-mapping>
 		<servlet-name>header</servlet-name>
-		<url-pattern>/header</url-pattern>
+		<url-pattern>header</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -69,7 +69,7 @@
 
 	<servlet-mapping>
 		<servlet-name>footer</servlet-name>
-		<url-pattern>/footer</url-pattern>
+		<url-pattern>footer</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
