@@ -33,19 +33,9 @@ public class UploadController {
         return "home";
     }
     
-    @GetMapping("/split")
-    public String goToHome() {
-        return "split";
-    }
-    
     @GetMapping("/uploadStatus")
     public String uploadStatus() {
         return "uploadStatus";
-    }
-    
-    @GetMapping("/merge")
-    public String goToMerge() {
-        return "merge";
     }
     
 	public static String split(int startPage, int endPage,String filePath,HttpServletRequest request) {

@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<div class="col-md-12" style="margin-top: 16px;">
+				<div class="col-md-4" style="margin-left: -11rem; color: #8b8c8d">
+					Developed By Ankit Agarwal</div>
+				<div class="col-md-8" ng-if="$state.current.name != 'splitmergepdfs.merge'">
+					Do you want to merge PDF? click here <a
+						ui-sref="splitmergepdfs.merge">Merge PDFs</a>
+				</div>
+
+
+				<div class="col-md-8" ng-if="$state.current.name != 'splitmergepdfs.split'">
+					Do you want to split PDF? click here <a
+						ui-sref="splitmergepdfs.split">Split PDFs</a>
+				</div>
+			</div>
+		</div>
+	</nav>

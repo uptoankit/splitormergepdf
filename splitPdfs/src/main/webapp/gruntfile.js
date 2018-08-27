@@ -34,11 +34,18 @@ module.exports = function (grunt) {
                 src: [
                         'ui-resources/smp/main/splitmergepdfs.module.js',
 
+                        'ui-resources/smp/modules/common/directive/fileModel.js',
+                        'ui-resources/smp/modules/common/service/fileUpload.js',
+
                         'ui-resources/smp/modules/split/split.module.js',
                         'ui-resources/smp/modules/split/splitCtrl.js',
+                        'ui-resources/smp/modules/common/header/headerCtrl.js',
+                        'ui-resources/smp/modules/common/footer/footerCtrl.js',
+                        'ui-resources/smp/modules/common/base/baseCtrl.js',
 
                         'ui-resources/smp/modules/merge/merge.module.js',
                         'ui-resources/smp/modules/merge/mergeCtrl.js'
+                        
                     ],
                  dest: 'ui-resources/build/build.splitpdfs.js'        
             }
@@ -106,13 +113,18 @@ module.exports = function (grunt) {
                 files: [
                     //distideal
                     'ui-resources/smp/main/splitmergepdfs.module.js',
+                    
+                    'ui-resources/smp/modules/common/directive/fileModel.js',
+                    'ui-resources/smp/modules/common/service/fileUpload.js',
 
                     'ui-resources/smp/modules/split/split.module.js',
                     'ui-resources/smp/modules/split/splitCtrl.js',
+                    'ui-resources/smp/modules/common/header/headerCtrl.js',
+                    'ui-resources/smp/modules/common/footer/footerCtrl.js',
+                    'ui-resources/smp/modules/common/base/baseCtrl.js',
 
                     'ui-resources/smp/modules/merge/merge.module.js',
                     'ui-resources/smp/modules/merge/mergeCtrl.js'
-                    
                 ],
                 tasks: ['concat:splitmergepdfsjs']        
             },        

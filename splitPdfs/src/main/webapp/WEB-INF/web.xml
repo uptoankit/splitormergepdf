@@ -12,12 +12,13 @@
 		<init-param>
 			<param-name>jersey.config.server.provider.packages</param-name>
 			<param-value>com.smp.uiservices;
-				com.fasterxml.jackson.jaxrs;
+				com.fasterxml.jackson.jaxrs;com.fasterxml.jackson.jaxrs.json;
 			</param-value>
 		</init-param>
 		<init-param>
 			<param-name>jersey.config.server.provider.classnames</param-name>
-			<param-value>org.glassfish.jersey.media.multipart.MultiPartFeature;org.glassfish.jersey.server.mvc.jsp.JspMvcFeature
+			<param-value>org.glassfish.jersey.media.multipart.MultiPartFeature;
+			org.glassfish.jersey.server.mvc.jsp.JspMvcFeature
 			</param-value>
 		</init-param>
 		<init-param>
@@ -52,31 +53,16 @@
 		<url-pattern>/mergePdfs</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>header</servlet-name>
-		<jsp-file>/WEB-INF/jsp/header.jsp</jsp-file>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>header</servlet-name>
-		<url-pattern>header</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>footer</servlet-name>
-		<jsp-file>/WEB-INF/jsp/footer.jsp</jsp-file>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>footer</servlet-name>
-		<url-pattern>footer</url-pattern>
-	</servlet-mapping>
-
 	<servlet-mapping>
 		<servlet-name>default</servlet-name>
 		<url-pattern>/ui-resources/*</url-pattern>
 	</servlet-mapping>
-
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/header</url-pattern>
+	</servlet-mapping>
+	
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>

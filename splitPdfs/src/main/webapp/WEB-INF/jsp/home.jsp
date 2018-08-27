@@ -19,16 +19,14 @@
 <script
 	src='<c:out value="${appContextUrl}" />ui-resources/build/build.vendorsjs.min.js'></script>
 <script
-	src='<c:out value="${appContextUrl}" />ui-resources/build/build.splitpdfs.min.js'></script>
+	src='<c:out value="${appContextUrl}" />ui-resources/build/build.splitpdfs.js'></script>
 </head>
 <script type="text/javascript">
    	var _appContextUrl = '<c:out value="${appContextUrl}" />';
  </script>
 <body>
-	<c:import url="header"></c:import>
-
+	<div ui-view="header" class="ng-cloak"></div>
 	<div ui-view="container" class="ng-cloak"></div>
-
-	<c:import url="footer"></c:import>
+	<div ui-view="footer" class="ng-cloak"></div>
 </body>
 </html>

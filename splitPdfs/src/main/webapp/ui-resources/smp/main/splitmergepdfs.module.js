@@ -8,14 +8,30 @@ smpApp.config(
     ['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function($stateProvider, $urlRouterProvider, $locationProvider) {
             $stateProvider
+            .state('splitmergepdfs', {
+                views: {
+                	'header@': {
+                        controller: 'headerCtrl',
+                        templateUrl: _appContextUrl + 'ui-resources/smp/modules/common/header/header.html'
+                    }
+                }
+            })
             .state('splitmergepdfs.split', {
                 title: 'Cisco Commerce Workspace',
                 url: '/split',
                 views: {
+                	'header@': {
+                        controller: 'headerCtrl',
+                        templateUrl: _appContextUrl + 'ui-resources/smp/modules/common/header/header.html'
+                    },
                     'container@': {
                         title: 'Split',
                         controller: 'splitCtrl',
                         templateUrl: _appContextUrl + 'ui-resources/smp/modules/split/split.html'
+                    },
+                    'footer@': {
+                        controller: 'headerCtrl',
+                        templateUrl: _appContextUrl + 'ui-resources/smp/modules/common/footer/footer.html'
                     }
                 }
             })
@@ -23,21 +39,36 @@ smpApp.config(
                 title: 'Cisco Commerce Workspace',
                 url: '/merge',
                 views: {
+                	'header@': {
+                        controller: 'headerCtrl',
+                        templateUrl: _appContextUrl + 'ui-resources/smp/modules/common/header/header.html'
+                    },
                     'container@': {
                         title: 'Merge',
                         controller: 'mergeCtrl',
                         templateUrl: _appContextUrl + 'ui-resources/smp/modules/merge/merge.html'
+                    },
+                    'footer@': {
+                        controller: 'headerCtrl',
+                        templateUrl: _appContextUrl + 'ui-resources/smp/modules/common/footer/footer.html'
                     }
                 }
             })
             .state('otherwise', {
             	title: 'Cisco Commerce Workspace',
-                url: '/split',
+                url: '',
                 views: {
+                    'header@': {
+                        controller: 'headerCtrl',
+                        templateUrl: _appContextUrl + 'ui-resources/smp/modules/common/header/header.html'
+                    },
                     'container@': {
-                        title: 'Split',
-                        controller: 'splitCtrl',
+                        controller: 'baseCtrl',
                         templateUrl: _appContextUrl + 'ui-resources/smp/modules/split/split.html'
+                    },
+                    'footer@': {
+                        controller: 'footerCtrl',
+                        templateUrl: _appContextUrl + 'ui-resources/smp/modules/common/footer/footer.html'
                     }
                 }
             });
