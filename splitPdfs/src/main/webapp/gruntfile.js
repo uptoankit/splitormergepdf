@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             },
             vendorsjs: {  /* For vendor js. Include all 3rd party js here. */
               src: [
-                    'vendors/jquery/2.1.4/jquery-2.1.4.min.js',
+                    'vendors/jquery/jquery-2.2.4.min.js', 
                     'vendors/angularjs/1.4.7/angular.min.js',
                     'vendors/angularjs/1.4.7/angular-animate.min.js',
                     'vendors/angularjs/1.4.7/angular-resource.min.js',
@@ -22,11 +22,8 @@ module.exports = function (grunt) {
                     'vendors/angularjs/1.4.7/angular-cookies.min.js',
                     'vendors/angular-ui-router/angular-ui-router.min.js',
                     'vendors/ngStorage.js',
-                    'vendors/moment/moment.min.js',
-                    'vendors/angular-moment/angular-moment.min.js',
                     'vendors/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js',
-              	  	'vendors/underscore/underscore.js', 
-                    'vendors/ng-idle/angular-idle.min.js',
+              	  	'vendors/ng-idle/angular-idle.min.js'
                ],
                 dest: 'ui-resources/build/build.vendorsjs.js'
             },
@@ -93,7 +90,7 @@ module.exports = function (grunt) {
             prodtar: {files: ['ui-resources/build/build.prod.css'], tasks: ['cssmin:prodtar']},
             vendorsjswatch: { /* Watch for vendor js files changes */
               files: [
-                    'vendors/jquery/2.1.4/jquery-2.1.4.min.js',
+                    'vendors/jquery/jquery-2.2.4.min.js',
                     'vendors/angularjs/1.4.7/angular.min.js',
                     'vendors/angularjs/1.4.7/angular-animate.min.js',
                     'vendors/angularjs/1.4.7/angular-resource.min.js',
@@ -104,7 +101,6 @@ module.exports = function (grunt) {
                     'vendors/angular-ui-router/angular-ui-router.min.js',
                     'vendors/ngStorage.js',
                     'vendors/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js',
-                    'vendors/underscore/underscore.js', 
                     'vendors/ng-idle/angular-idle.min.js'
                     ],
                  tasks: ['concat:vendorsjs']
