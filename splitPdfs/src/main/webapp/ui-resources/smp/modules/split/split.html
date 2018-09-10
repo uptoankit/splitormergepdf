@@ -1,0 +1,81 @@
+<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Split PDF (Max File Size to upload is 20MB.)
+				</h3>
+			</div>
+			<br /> <br /><br /> <br />
+
+			<div class="row ng-cloak" data-ng-if="showErrorMessage">
+		      <div class="col-lg-12">
+		          <div class="alert alert-danger">
+		              <span>{{errorMessage}}</span>
+		          </div>
+		      </div>
+		  	</div>
+		  	
+		  	<div class="row ng-cloak" data-ng-if="showSuccessStatus">
+		      <div class="col-lg-12">
+		          <div class="alert alert-success">
+		              <span>{{successStatus}}</span>
+		          </div>
+		      </div>
+		  	</div>
+			<div class="col-md-12">
+				<form autocomplete="off"
+					enctype="multipart/form-data">
+
+					<div class="col-md-12">
+						<div class="col-md-2">
+							<label>Upload the file to split: </label>
+						</div>
+						<div class="col-md-10">
+							<input  type="file" onchange="angular.element(this).scope().onFileSelect(this);" id="uploadFileToSplit"  />
+						</div>
+					</div>
+					<br /> <br />
+
+					<div class="col-md-12">
+						<label>Enter Page Number </label>
+					</div>
+					<br /> <br />
+
+					<div class="col-md-12">
+						<div class="col-md-2">
+							<label>Start Page Number : </label>
+						</div>
+						<div class="col-md-10">
+							<input type="number" name="startPageNumber" ng-model="startPageNumber"/>
+						</div>
+					</div>
+					<br /> <br />
+
+					<div class="col-md-12">
+						<div class="col-md-2">
+							<label>End Page Number : </label>
+						</div>
+						<div class="col-md-10">
+							<input type="number" name="endPageNumber" ng-model="endPageNumber"/>
+						</div>
+					</div>
+
+					<div></div>
+
+					<br /> <br /> 
+					<div class="col-md-12" style="padding-left: 34rem;">
+						<button class="btn btn-default" name="split" value="Split" 
+						ng-click="split(startPageNumber, endPageNumber);">
+							Split
+						</button>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-2"><label>Status:</label></div>
+						<div class="col-md-10">
+							{{statusMessage}}
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>

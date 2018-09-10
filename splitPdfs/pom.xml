@@ -11,7 +11,7 @@
 	</parent>
 
 
-	<groupId>com.split</groupId>
+	<groupId>com.smp</groupId>
 	<artifactId>splitPdfs</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
@@ -57,31 +57,33 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
 		<!-- compile only, deployed container will provide this -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
-		<dependency>
+		
+		<!-- <dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!-- Apache Commons Upload -->
 		<dependency>
@@ -99,13 +101,13 @@
 
 
 
-		<!-- Need this to compile JSP -->
-		<dependency>
+		 <!-- Need this to compile JSP -->
+		<!--<dependency>
 			<groupId>org.eclipse.jdt.core.compiler</groupId>
 			<artifactId>ecj</artifactId>
 			<version>4.6.1</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 
 		<!-- Optional, for bootstrap -->
 		<dependency>
@@ -126,12 +128,14 @@
 			<artifactId>pdfbox</artifactId>
 			<version>2.0.11</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-multipart</artifactId>
-			<version>2.22.3</version>
 		</dependency>
-		<dependency>
+		<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-servlet -->
+
+		 <dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
 			<artifactId>jersey-mvc-jsp</artifactId>
 			<version>2.22.3</version>
@@ -149,12 +153,18 @@
 					<artifactId>jersey-container-servlet-core</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> 
 		
 		<dependency>
+		  <groupId>org.glassfish.jersey.media</groupId>
+		  <artifactId>jersey-media-json-jackson</artifactId>
+		  <version>2.25</version>
+		  <scope>runtime</scope>
+		</dependency>
+		
+		 <dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
 			<artifactId>jersey-spring3</artifactId>
-			<version>2.22.3</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>spring-context</artifactId>
@@ -176,17 +186,13 @@
 					<artifactId>jersey-server</artifactId>
 					<groupId>org.glassfish.jersey.core</groupId>
 				</exclusion>
-
-				<exclusion>
-					<artifactId>hk2</artifactId>
-					<groupId>org.glassfish.hk2</groupId>
-				</exclusion>
 				<exclusion>
 					<groupId>javax.ws.rs</groupId>
 					<artifactId>javax.ws.rs-api</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> 
+		
 	</dependencies>
 
 	<build>
@@ -213,23 +219,20 @@
 				<version>2.2</version>
 				<configuration>
 					<port>9090</port>
-					<additionalConfigFilesDir>
-						${basedir}/src/main/resources
-					</additionalConfigFilesDir>
+					
 				</configuration>
 			</plugin>
 			<!-- configure Eclipse workspace -->
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
 					<wtpversion>2.0</wtpversion>
 					<wtpContextName>/splitPdfs</wtpContextName>
 				</configuration>
-			</plugin>
+			</plugin> -->
 
 		</plugins>
 	</build>
